@@ -36,7 +36,7 @@ import config from '@root/hydre.toml'
       titleTemplate: eval(conf.titleTemplate),
       meta: [
         { name: 'description', content: configLang.description },
-        { property: 'og:title', content: configLang.ogTitle, template: configLang.ogTemplate },
+        { property: 'og:title', content: configLang.ogTitle, template: eval(configLang.ogTemplate) },
         { name: 'msapplication-TileColor', content: config.tileColor },
         { name: 'theme-color', content: config.themeColor },
         ...og,
