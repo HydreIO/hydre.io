@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+		"serve": "vue-cli-service serve",
+		"build": "npm run gen && vue-cli-service build",
+		"gen": "babel-node --config-file ./.babelrc.hydre gen/generate.js",
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.10",
