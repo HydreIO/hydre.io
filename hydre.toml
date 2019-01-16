@@ -1,0 +1,40 @@
+app = 'Hydre'
+themeColor = '#ffffff'
+ogImage = 'https://hydre.io/img/og/og-image.jpg'
+touchIconSize = '180x180'
+maskIconColor = '#e40000'
+tileColor = '#b91d47'
+
+[en]
+title = ''
+titleTemplate = '''t => t ? `Hydre | ${t}` : 'Hydre' '''
+description = 'We are a developer organisation building open-source decentralized content and blockchain related technologies'
+ogTitle = ''
+ogTemplate = '''t => `${t} - Hydre.io`'''
+
+[fr]
+title = ''
+titleTemplate = '''t => t ? `Hydre | ${t}` : 'Hydre' '''
+description = 'Nous sommes une organisation de développeurs construisant des projets décentralisée open-source ainsi que des technologies en rapport avec la blockchain.'
+ogTitle = ''
+ogTemplate = '''t => `${t} - Hydre.com`'''
+
+[[og]]
+property = 'og:image:width'
+content = '279'
+[[og]]
+property = 'og:image:height'
+content = '279'
+[[og]]
+property = 'og:url'
+content = 'https://hydre.io'
+
+[[tw]]
+name = 'twitter:site'
+content = '@hydreio'
+[[tw]]
+name = 'twitter:card'
+content = 'summary_large_image'
+[[tw]]
+name = 'twitter:creator'
+content = '@hydreio'
