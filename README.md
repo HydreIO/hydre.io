@@ -1,26 +1,7 @@
-# TEMPLATE
+# Hydre.io [![Netlify Status](https://api.netlify.com/api/v1/badges/7c67381e-b666-4d08-86f5-e1acd6287cd7/deploy-status)](https://app.netlify.com/sites/hydre/deploys)
 
-## Project setup
+## Test it yourself
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
 ```
