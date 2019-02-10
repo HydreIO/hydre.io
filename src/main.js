@@ -12,6 +12,8 @@ import SmoothScroll from 'smoothscroll-for-websites'
 import i18n from '@core/i18n'
 import '@core/misc/scrollFire' // init
 import 'aos/dist/aos.css'
+import FlatSurfaceShader from 'vue-flat-surface-shader'
+
 
 console.log('%c Hydre', 'color: #FF8F00;font-weight:bold;font-size:30px;')
 console.log("%c Don't bother, we are open-source!", 'color: #FF8F00;font-size:18px;')
@@ -21,6 +23,7 @@ Vue.config.productionTip = false
 
 Vue.directive('rp', Ripple)
 Vue.component('fa', Icons)
+Vue.use(FlatSurfaceShader)
 Vue.use(VueMq, {
 	breakpoints: {
 		sm: 813, // iphoneX max
