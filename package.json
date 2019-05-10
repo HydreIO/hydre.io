@@ -8,7 +8,7 @@
     "gen": "babel-node --config-file ./.babelrc.hydre gen/generate.js"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.14",
+    "@fortawesome/fontawesome-svg-core": "^1.2.18",
     "@fortawesome/free-brands-svg-icons": "^5.7.1",
     "@fortawesome/free-regular-svg-icons": "^5.7.1",
     "@fortawesome/free-solid-svg-icons": "^5.7.1",
