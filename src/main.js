@@ -7,12 +7,7 @@ import Ripple from 'vue-ripple-directive'
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import store from '@core/stores'
 import Icons from '@cmp/utils/icons.vue'
-import aos from 'aos'
-import SmoothScroll from 'smoothscroll-for-websites'
 import i18n from '@core/i18n'
-import '@core/misc/scrollFire' // init
-import 'aos/dist/aos.css'
-import FlatSurfaceShader from 'vue-flat-surface-shader'
 
 
 console.log('%c Hydre', 'color: #FF8F00;font-weight:bold;font-size:30px;')
@@ -29,15 +24,6 @@ Vue.use(VueMq, {
 		sm: 813, // iphoneX max
 		lg: Infinity,
 	},
-})
-
-aos.init({
-	offset: 200,
-	duration: 1000,
-	easing: 'ease-in-sine',
-	delay: 100,
-	disable: () => window.innerWidth < 814,
-	anchorPlacement: 'top-bottom',
 })
 
 new Vue({
