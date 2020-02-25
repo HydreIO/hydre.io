@@ -1,5 +1,5 @@
 module.exports = {
-	presets: [ [ "@vue/app", { useBuiltIns: "entry" } ] ],
+	presets: [["@vue/app", { useBuiltIns: "entry" }]],
 	plugins: [
 		['@babel/plugin-proposal-decorators', { legacy: true }],
 		['@babel/plugin-proposal-class-properties', { loose: true }],
@@ -12,7 +12,7 @@ module.exports = {
 		['@babel/plugin-syntax-dynamic-import'],
 		['@babel/plugin-proposal-nullish-coalescing-operator'],
 		['@babel/plugin-proposal-logical-assignment-operators'],
-		['@babel/plugin-proposal-pipeline-operator', { proposal: 'minimal' }],
+		['@babel/plugin-proposal-pipeline-operator', { proposal: 'fsharp' }],
 		['@babel/plugin-proposal-throw-expressions'],
 		['@babel/plugin-proposal-do-expressions'],
 		['babel-plugin-implicit-function'],
