@@ -60,7 +60,7 @@
     "babel-plugin-implicit-function": "^0.1.1",
     "babel-plugin-transform-imports": "2.0.0",
     "cli-real-favicon": "0.0.8",
-    "extract-loader": "^4.0.3",
+    "extract-loader": "^5.0.1",
     "fs-extra": "^8.1.0",
     "material-design-icons-iconfont": "^5.0.1",
     "pug": "^2.0.4",
