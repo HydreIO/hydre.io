@@ -43,20 +43,18 @@ export default class Home extends Vue {
   resume() {
     this.bounce = true;
     const self = this;
-    setTimeout(() => {
-      try {
-        const AudioContext = window.AudioContext || window.webkitAudioContext;
-        const audioContext = new AudioContext();
-        const audioElement = self.$refs.audio;
-        audioElement.play();
-        const track = audioContext.createMediaElementSource(audioElement);
-        const gainNode = audioContext.createGain();
-        gainNode.gain.value = 0.1;
-        track.connect(gainNode);
-        gainNode.connect(audioContext.destination);
-        audioContext.resume();
-      } catch (error) {}
-    }, 50);
+    try {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      const audioContext = new AudioContext();
+      const audioElement = self.$refs.audio;
+      audioElement.play();
+      const track = audioContext.createMediaElementSource(audioElement);
+      const gainNode = audioContext.createGain();
+      gainNode.gain.value = 0.1;
+      track.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+      audioContext.resume();
+    } catch (error) {}
   }
 
   light = {
