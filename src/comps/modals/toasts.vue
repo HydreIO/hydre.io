@@ -3,7 +3,7 @@
         toast-update
         toast-offline
         toastCached
-        cookies
+        //- cookies
 </template>
 
 <script>

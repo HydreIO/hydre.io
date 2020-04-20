@@ -35,7 +35,7 @@ export default class Home extends Vue {
   mounted() {
     setTimeout(() => {
       this.$toasted.show(
-        "Hey! if you see a grey background, please use Chrome 🐕"
+        "Hey! if you doesn't see a purple background then Webgl is not enabled in your browser, if you use safari then deal with it 🐕"
       );
     }, 1000);
   }
