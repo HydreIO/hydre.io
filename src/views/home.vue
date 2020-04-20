@@ -6,13 +6,16 @@ fr:
 </i18n>
 
 <template lang="pug">
-  main(@click="resume()")
+  main
     flat-surface-shader.shader(type="webgl" :light="light" :mesh="mesh")
-    audio(ref="audio" src="@rs/guetta.mp3" type="audio/mpeg" autoplay loop)
-    .texture(@click="resume()")
+    audio(ref="audio" src="@rs/guetta.mp3" type="audio/mpeg" loop)
+    .texture
     a(href="https://github.com/HydreIO" target="_blank")
       fa.topr(fab="github" size="lg")
-    .text(:class="{bounce}")
+    .arrow(:class="{seek: !bounce }")
+      span Click me
+      fa(fas="long-arrow-alt-down" size="lg" )
+    .text(:class="{bounce}" @click="resume()")
       hydre.svg
       span Hydre
 </template>
@@ -28,6 +31,15 @@ import { Vue, Component } from "vue-property-decorator";
 })
 export default class Home extends Vue {
   bounce = false;
+
+  mounted() {
+    setTimeout(() => {
+      this.$toasted.show(
+        "Hey! if you see a grey background, please use Chrome 🐕"
+      );
+    }, 1000);
+  }
+
   resume() {
     this.bounce = true;
     const self = this;
@@ -36,6 +48,7 @@ export default class Home extends Vue {
         const AudioContext = window.AudioContext || window.webkitAudioContext;
         const audioContext = new AudioContext();
         const audioElement = self.$refs.audio;
+        audioElement.play();
         const track = audioContext.createMediaElementSource(audioElement);
         const gainNode = audioContext.createGain();
         gainNode.gain.value = 0.1;
@@ -83,6 +96,8 @@ main
   height 100vh
   display flex
   justify-content center
+  flex-flow column nowrap
+  align-items center
   position relative
   user-select none
   overflow hidden
@@ -108,12 +123,31 @@ main
     height 100vh
     background url('~@rs/broken-noise.png')
 
+  .arrow
+    position relative
+    transition opacity 500ms
+    opacity 0
+    display flex
+    flex-flow column nowrap
+    justify-content center
+    align-items center
+    padding-bottom 1em
+
+    span
+      font-family 'sweet-retro'
+      font-weight 300
+      font-size 1.5em
+
   .text
     position relative
     display flex
     justify-content center
     align-items center
     flex-flow column nowrap
+    height max-content
+    cursor pointer
+    z-index 1
+    opacity .7
 
     &.bounce
       animation bounce .22s ease-in infinite alternate
@@ -133,5 +167,26 @@ main
 
   to
     transform scale(1.05)
+
+@keyframes seek
+  from, 20%, 53%, 80%, to
+    animation-timing-function cubic-bezier(.215, .61, .355, 1)
+    transform translate3d(0, 0, 0)
+
+  40%, 43%
+    animation-timing-function cubic-bezier(.755, .05, .855, .06)
+    transform translate3d(0, -30px, 0)
+
+  70%
+    animation-timing-function cubic-bezier(.755, .05, .855, .06)
+    transform translate3d(0, -15px, 0)
+
+  90%
+    transform translate3d(0, -4px, 0)
+
+.seek
+  animation seek 5s infinite
+  transform-origin center bottom
+  opacity .7 !important
 </style>
 

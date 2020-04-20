@@ -1,10 +1,10 @@
 <i18n>
 en:
-    text: "Enable sounds, clic and refresh! Use chrome if you see a grey background!"
+    text: "Clic the logo! Use chrome if you see a grey background!"
     ok: "Got it!"
     infos: "Fuck off"
 fr:
-    text: "Enable sounds, clic and refresh! Use chrome if you see a grey background!"
+    text: "Clic the logo! Use chrome if you see a grey background!"
     ok: "Got it!"
     infos: "Fuck off"
 </i18n>

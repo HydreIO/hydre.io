@@ -10,6 +10,7 @@ import Icons from '@cmp/utils/icons.vue'
 import i18n from '@core/i18n'
 import FlatSurfaceShader from 'vue-flat-surface-shader'
 import SmoothScroll from 'smoothscroll-for-websites'
+import toasted from 'vue-toasted'
 
 
 console.log('%c Hydre', 'color: #FF8F00;font-weight:bold;font-size:30px;')
@@ -26,6 +27,13 @@ Vue.use(VueMq, {
 		sm: 813, // iphoneX max
 		lg: Infinity,
 	},
+})
+
+Vue.use(toasted, {
+	position: 'bottom-right',
+	duration: 4000,
+	closeOnSwipe: true,
+	containerClass: 'toasts'
 })
 
 new Vue({
