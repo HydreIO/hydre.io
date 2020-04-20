@@ -12,7 +12,7 @@ fr:
     .texture(@click="resume()")
     a(href="https://github.com/HydreIO" target="_blank")
       fa.topr(fab="github" size="lg")
-    .text
+    .text(:class="{bounce}")
       hydre.svg
       span Hydre
 </template>
@@ -27,11 +27,9 @@ import { Vue, Component } from "vue-property-decorator";
   }
 })
 export default class Home extends Vue {
-  mounted() {
-    this.resume();
-  }
-
+  bounce = false;
   resume() {
+    this.bounce = true;
     const self = this;
     setTimeout(() => {
       try {
@@ -43,9 +41,9 @@ export default class Home extends Vue {
         gainNode.gain.value = 0.1;
         track.connect(gainNode);
         gainNode.connect(audioContext.destination);
-        self.audioContext.resume();
+        audioContext.resume();
       } catch (error) {}
-    }, 10);
+    }, 50);
   }
 
   light = {
@@ -116,7 +114,9 @@ main
     justify-content center
     align-items center
     flex-flow column nowrap
-    animation bounce .22s ease-in infinite alternate
+
+    &.bounce
+      animation bounce .22s ease-in infinite alternate
 
     .svg
       width 80px
