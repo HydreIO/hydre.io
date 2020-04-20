@@ -15,6 +15,5 @@ module.exports = {
 		['@babel/plugin-proposal-pipeline-operator', { proposal: 'fsharp' }],
 		['@babel/plugin-proposal-throw-expressions'],
 		['@babel/plugin-proposal-do-expressions'],
-		['babel-plugin-implicit-function'],
 	]
 }

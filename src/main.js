@@ -8,6 +8,8 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import store from '@core/stores'
 import Icons from '@cmp/utils/icons.vue'
 import i18n from '@core/i18n'
+import FlatSurfaceShader from 'vue-flat-surface-shader'
+import SmoothScroll from 'smoothscroll-for-websites'
 
 
 console.log('%c Hydre', 'color: #FF8F00;font-weight:bold;font-size:30px;')
