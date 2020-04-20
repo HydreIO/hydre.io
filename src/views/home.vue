@@ -27,16 +27,7 @@ import { Vue, Component } from "vue-property-decorator";
   }
 })
 export default class Home extends Vue {
-  AudioContext = window.AudioContext || window.webkitAudioContext;
-  audioContext = new AudioContext();
-
   mounted() {
-    const audioElement = this.$refs.audio;
-    const track = this.audioContext.createMediaElementSource(audioElement);
-    const gainNode = this.audioContext.createGain();
-    gainNode.gain.value = 0.1;
-    track.connect(gainNode);
-    gainNode.connect(this.audioContext.destination);
     this.resume();
   }
 
@@ -44,6 +35,14 @@ export default class Home extends Vue {
     const self = this;
     setTimeout(() => {
       try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        const audioContext = new AudioContext();
+        const audioElement = self.$refs.audio;
+        const track = audioContext.createMediaElementSource(audioElement);
+        const gainNode = audioContext.createGain();
+        gainNode.gain.value = 0.1;
+        track.connect(gainNode);
+        gainNode.connect(audioContext.destination);
         self.audioContext.resume();
       } catch (error) {}
     }, 10);

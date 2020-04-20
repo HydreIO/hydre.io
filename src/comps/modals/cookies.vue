@@ -1,11 +1,11 @@
 <i18n>
 en:
     text: "Enable sounds, clic and refresh! Use chrome if you see a grey background!"
-    ok: "Enable sounds, clic and refresh! Use chrome if webgl doesn't work"
+    ok: "Got it!"
     infos: "Fuck off"
 fr:
     text: "Enable sounds, clic and refresh! Use chrome if you see a grey background!"
-    ok: "Enable sounds, clic and refresh! Use chrome if webgl doesn't work"
+    ok: "Got it!"
     infos: "Fuck off"
 </i18n>
 
