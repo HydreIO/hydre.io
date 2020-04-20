@@ -4,9 +4,7 @@
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "npm run gen && vue-cli-service build",
-    "gen": "babel-node --config-file ./.babelrc.hydre gen/generate.js",
-    "icons": "real-favicon generate faviconDescription.json faviconData.json public/img/icons/",
+    "build": "vue-cli-service build",
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
