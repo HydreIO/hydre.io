@@ -1,12 +1,12 @@
 <i18n>
 en:
-    text: "We may use cookies, they are good but high in fat !"
-    ok: "Got it!"
-    infos: "Read more"
+    text: "Enable sounds, clic and refresh! Use chrome if you see a grey background!"
+    ok: "Enable sounds, clic and refresh! Use chrome if webgl doesn't work"
+    infos: "Fuck off"
 fr:
-    text: "Nous utilisons les cookies, ils sont bons, mais très gras !"
-    ok: "Ok"
-    infos: "Infos"
+    text: "Enable sounds, clic and refresh! Use chrome if you see a grey background!"
+    ok: "Enable sounds, clic and refresh! Use chrome if webgl doesn't work"
+    infos: "Fuck off"
 </i18n>
 
 <template lang="pug">
