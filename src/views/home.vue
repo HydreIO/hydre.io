@@ -9,7 +9,7 @@ fr:
   main(@click="resume()")
     flat-surface-shader.shader(type="webgl" :light="light" :mesh="mesh")
     audio(ref="audio" src="@rs/guetta.mp3" type="audio/mpeg" autoplay loop)
-    .texture
+    .texture(@click="resume()")
     a(href="https://github.com/HydreIO" target="_blank")
       fa.topr(fab="github" size="lg")
     .text
@@ -37,12 +37,15 @@ export default class Home extends Vue {
     gainNode.gain.value = 0.1;
     track.connect(gainNode);
     gainNode.connect(this.audioContext.destination);
+    this.resume();
   }
 
   resume() {
     const self = this;
     setTimeout(() => {
-      self.audioContext.resume();
+      try {
+        self.audioContext.resume();
+      } catch (error) {}
     }, 10);
   }
 
