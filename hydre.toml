@@ -8,16 +8,16 @@ tileColor = '#b91d47'
 [en]
 title = ''
 titleTemplate = '''t => t ? `Hydre | ${t}` : 'Hydre' '''
-description = 'We are a developer organisation building open-source decentralized content and blockchain related technologies'
+description = 'We push heads'
 ogTitle = ''
 ogTemplate = '''t => `${t} - Hydre.io`'''
 
 [fr]
 title = ''
 titleTemplate = '''t => t ? `Hydre | ${t}` : 'Hydre' '''
-description = 'Nous sommes une organisation de développeurs construisant des projets décentralisée open-source ainsi que des technologies en rapport avec la blockchain.'
+description = 'We push heads'
 ogTitle = ''
-ogTemplate = '''t => `${t} - Hydre.com`'''
+ogTemplate = '''t => `${t} - Hydre.io`'''
 
 [[og]]
 property = 'og:image:width'
