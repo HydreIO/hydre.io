@@ -57,7 +57,7 @@
     "extract-loader": "^5.0.1",
     "fs-extra": "^9.0.0",
     "material-design-icons-iconfont": "^5.0.1",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "pug-plain-loader": "^1.0.0",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
